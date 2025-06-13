@@ -149,7 +149,7 @@ def main(args=None):
 
     # Odczytujemy folder z argumentu linii komend.
     # Jeśli nie podano, przyjmujemy bieżący katalog.
-    folder_to_watch = "/home/maciej_br/mgr/renders/rendered"
+    folder_to_watch = "/AS_ws/rendered"
     if len(sys.argv) > 1:
         folder_to_watch = sys.argv[1]
 
