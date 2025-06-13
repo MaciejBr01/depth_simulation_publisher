@@ -1,3 +1,3 @@
-[submodule "synthetic-rgbd-camera-model"]
-	path = synthetic-rgbd-camera-model
+[submodule "synthetic_rgbd_camera_model"]
+	path = synthetic_rgbd_camera_model
 	url = https://github.com/tomasz-naklicki/synthetic-rgbd-camera-model

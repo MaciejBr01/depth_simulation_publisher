@@ -11,7 +11,7 @@ from cv_bridge import CvBridge
 import cv2
 import importlib
 
-rgdbd_model = importlib.import_module("synthetic-rgbd-camera-model/src")
+rgdbd_model = importlib.import_module("../synthetic-rgbd-camera-model/src")
 
 
 class ImagePairPublisher(Node):
