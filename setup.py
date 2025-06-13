@@ -1,5 +1,6 @@
 from setuptools import find_packages, setup
-
+from glob import glob
+import os
 package_name = "depth_simulation_publisher"
 
 setup(
@@ -9,6 +10,10 @@ setup(
     data_files=[
         ("share/ament_index/resource_index/packages", ["resource/" + package_name]),
         ("share/" + package_name, ["package.xml"]),
+        # ("lib/" + package_name, glob("depth_simulation_publisher/synthetic_rgbd_camera_model/*.py"))
+        (os.path.join('lib/', package_name, 'synthetic_rgbd_camera_model'), glob("depth_simulation_publisher/synthetic_rgbd_camera_model/*.py")),
+        (os.path.join('lib/', package_name, 'synthetic_rgbd_camera_model', "src"), glob("depth_simulation_publisher/synthetic_rgbd_camera_model/src/*.py")),
+        (os.path.join('lib/', package_name, 'synthetic_rgbd_camera_model', "params"), glob("depth_simulation_publisher/synthetic_rgbd_camera_model/params/*.json")),
     ],
     install_requires=[
         "setuptools",

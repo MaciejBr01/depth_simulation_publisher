@@ -10,6 +10,7 @@ from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
 import importlib
+from ament_index_python.packages import get_package_share_directory
 
 _package_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'synthetic_rgbd_camera_model'))
 print(_package_dir)
@@ -18,6 +19,7 @@ if _package_dir not in sys.path:
     sys.path.insert(1, _package_dir)
 
 from src.processor import ImageProcessor
+
 
 
 class ImagePairPublisher(Node):
