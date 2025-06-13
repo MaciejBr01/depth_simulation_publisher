@@ -25,7 +25,6 @@ rocker==0.2.19
 rosdep==0.25.1
 rosdistro==1.0.1
 rosinstall-generator==0.1.23
-rospkg-modules==1.6.0
 SciPy==1.11.4
 setuptools==68.1.2
 urllib3==2.0.7
