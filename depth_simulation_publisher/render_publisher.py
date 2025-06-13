@@ -29,8 +29,6 @@ class ImagePairPublisher(Node):
         self.depth_topic = self.get_parameter("depth_topic").value
         self.processor = ImageProcessor(
             params_path=os.path.join(_package_dir, 'params', 'femto_mega.json'),
-            image_dir="./renders2",
-            output_dir="./output",
         )
 
         # Publisher dla rgb i depth
