@@ -19,13 +19,7 @@ PyQt5==5.15.10
 PyQt5-sip==12.13.0
 pyserial==3.5
 pytest==7.4.4
-pytest-cov==4.1.0
-pytest-mock==3.12.0
-python-apt==2.7.7+ubuntu4
-python-dateutil==2.8.2
-python-debian==0.1.49+ubuntu2
 pytz==2024.1
-pyxdg==0.28
 PyYAML==6.0.1
 rocker==0.2.19
 rosdep==0.25.1
