@@ -11,7 +11,13 @@ from cv_bridge import CvBridge
 import cv2
 import importlib
 
-rgdbd_model = importlib.import_module("../synthetic-rgbd-camera-model/src")
+_package_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'synthetic_rgbd_camera_model'))
+print(_package_dir)
+
+if _package_dir not in sys.path:
+    sys.path.insert(1, _package_dir)
+
+from src.processor import ImageProcessor
 
 
 class ImagePairPublisher(Node):
@@ -21,8 +27,8 @@ class ImagePairPublisher(Node):
         self.declare_parameter("depth_topic", "/camera/depth/image_raw")
         self.rgb_topic = self.get_parameter("rgb_topic").value
         self.depth_topic = self.get_parameter("depth_topic").value
-        self.processor = rgdbd_model.ImageProcessor(
-            params_path="./femto_mega.json",
+        self.processor = ImageProcessor(
+            params_path=os.path.join(_package_dir, 'params', 'femto_mega.json'),
             image_dir="./renders2",
             output_dir="./output",
         )
