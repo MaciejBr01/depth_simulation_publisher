@@ -23,9 +23,7 @@ pytz==2024.1
 PyYAML==6.0.1
 rocker==0.2.19
 rosdep==0.25.1
-rosdep-modules==0.25.1
 rosdistro==1.0.1
-rosdistro-modules==1.0.1
 rosinstall-generator==0.1.23
 rospkg-modules==1.6.0
 SciPy==1.11.4
