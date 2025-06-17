@@ -1,5 +1,6 @@
 # Depth Simulation Publisher
 
+![Zrzut_ekranu_z_2025-06-17_11-58-58](https://github.com/user-attachments/assets/e5dcd1db-caa5-474f-986f-cfb14db35cfb)
 This repository contains a ROS2 node that publishes simulated RGB and depth image pairs. It is designed to read pre-rendered images from a shared folder, apply processing to better mimic real depth images, and publish them as ROS2 topics.
 
 ## Getting Started with Docker
