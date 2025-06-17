@@ -3,7 +3,7 @@ xhost +local:root
 # BUILD THE IMAGE
 ROS_IMAGE="as_proj"
 ROS_CONTAINER="AS_PROJ"
-
+IMAGE_FOLDER="./img"
 XAUTH=/tmp/.docker.xauth
  if [ ! -f $XAUTH ]
  then
@@ -28,6 +28,6 @@ docker run -it \
     --privileged \
     --network=host \
     --name="$ROS_CONTAINER" \
-    --volume="/home/maciej_br/mgr/renders/rendered:/AS_ws/rendered:rw" \
+    --volume="${IMAGE_FOLDER}:/AS_ws/rendered:rw" \
     $ROS_IMAGE \
     /bin/bash
